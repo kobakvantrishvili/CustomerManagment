@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomerManagment</name>
+    </assembly>
+    <members>
+        <member name="M:CustomerManagment.Controllers.CustomerController.Register(CustomerManagment.Models.Requests.CustomerRegistrationRequest)">
+             <summary>
+             Customer Registration Action Method
+             </summary>
+             <param name="customer"></param>
+             <returns></returns>
+             <remarks>
+             Sample request:
+            
+                 {
+                     "firstName": "Koba",
+                     "lastName": "Kvantrishvili",
+                     "userName": "Kvantro",
+                     "password": "Kvantro123",
+                     "email": "koba.kvantro@gmail.com"
+                 }
+            
+             </remarks>
+             <response code="201">Created a new customer data entry</response>
+             <response code="409">Customer with same gmail already exists</response>
+        </member>
+        <member name="M:CustomerManagment.Controllers.CustomerController.LogIn(CustomerManagment.Models.Requests.CustomerLogInRequest)">
+             <summary>
+             Customer Log In Action Method
+             </summary>
+             <param name="request"></param>
+             <returns>A newly created TodoItem</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /LogIn
+                 {
+                     "email": "koba.kvantro@gmail.com",
+                     "password": "Kvantro123"
+                 }
+            
+             </remarks>
+             <response code="200">Succesfully logged in</response>
+             <response code="401">Customer authentication failed</response>
+        </member>
+    </members>
+</doc>
